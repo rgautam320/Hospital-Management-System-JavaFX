@@ -1,0 +1,6 @@
+# Ignoring Files and Folders
+bin
+build.fxbuild
+.classpath
+org.eclipse.jdt.core.prefs
+.project
