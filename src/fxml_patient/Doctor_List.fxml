@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patient.DoctorController">
+   <top>
+      <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="List of Doctors" textFill="BLUE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="tv" prefHeight="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tvUsername" prefWidth="75.0" text="Username" />
+          <TableColumn fx:id="tvFullname" prefWidth="75.0" text="Fullname" />
+            <TableColumn fx:id="tvEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="tvPhone" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="tvAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="tvDOB" prefWidth="75.0" text="DoB" />
+            <TableColumn fx:id="tvEnroll" prefWidth="75.0" text="Enrollment" />
+            <TableColumn fx:id="tvQualification" prefWidth="75.0" text="Qualification" />
+            <TableColumn fx:id="tvExpertise" prefWidth="75.0" text="Expertise" />
+            <TableColumn fx:id="tvGender" prefWidth="75.0" text="Gender" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>

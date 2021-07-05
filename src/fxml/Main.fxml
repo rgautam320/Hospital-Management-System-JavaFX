@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <top>
+      <Label alignment="CENTER" maxHeight="70.0" maxWidth="1564.0" style="-fx-background-color: #b5fffb;" text="Gautam General Hospital" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5152671828524757" endY="1.0" startY="0.6412214177255412">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1518518477678299" green="0.4628395140171051" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </top>
+   <right>
+      <Pane prefHeight="530.0" prefWidth="415.0" style="-fx-background-color: #fdffcf;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="loginVBox" layoutX="13.0" layoutY="86.0" prefHeight="353.0" prefWidth="390.0" spacing="15.0" style="-fx-background-color: #fdffcf;">
+               <children>
+                  <Label text="Username:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" prefHeight="40.0" prefWidth="370.0" promptText="Username">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Password:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="password" prefHeight="40.0" promptText="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Label text="User Type:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="type" prefHeight="40.0" prefWidth="370.0" promptText="Choose Type" visibleRowCount="100" />
+                  <Button mnemonicParsing="false" onAction="#userLogin" prefHeight="40.0" prefWidth="100.0" text="Login">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5152671828524757" endY="1.0" startY="0.6412214177255412">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1518518477678299" green="0.4628395140171051" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.3168557584285736" green="0.8105263113975525" blue="0.0510331392288208" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+               </padding>
+            </VBox>
+            <Pane layoutX="8.0" layoutY="446.0" prefHeight="70.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="8.0" prefHeight="27.0" prefWidth="400.0" text="Special Offer!">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5152671828524757" endY="1.0" startY="0.3778626536595002">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9660115838050842" green="1.0" blue="0.1599999964237213" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="0.07000000029802322" blue="0.4247976839542389" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="5.0" layoutY="43.0" prefHeight="28.0" prefWidth="390.0" text="50% Discount on every service !!! Hurray !!!">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Line endX="288.00006103515625" layoutX="114.0" layoutY="446.0" startX="-100.0" />
+            <Label fx:id="warning" layoutX="23.0" layoutY="67.0" prefHeight="17.0" prefWidth="370.0" textFill="RED" />
+            <HBox layoutX="13.0" layoutY="3.0" prefHeight="58.0" prefWidth="390.0" spacing="35.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#loginToggle" prefHeight="52.0" prefWidth="125.0">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="108.0" text="Login">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.5152671828524757" endY="1.0" startY="0.6412214177255412">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.1518518477678299" green="0.4628395140171051" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.3168557584285736" green="0.8105263113975525" blue="0.0510331392288208" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#signupToggle" prefHeight="52.0" prefWidth="125.0">
+                     <graphic>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="108.0" text="Signup">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.5152671828524757" endY="1.0" startY="0.6412214177255412">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.1518518477678299" green="0.4628395140171051" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.3168557584285736" green="0.8105263113975525" blue="0.0510331392288208" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </HBox>
+            <VBox fx:id="signupVBox" layoutX="13.0" layoutY="86.0" prefHeight="353.0" prefWidth="390.0" spacing="15.0" style="-fx-background-color: #fdffcf;">
+               <children>
+                  <Label text="Full Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signFullname" prefHeight="40.0" prefWidth="370.0" promptText="Full Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Username:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signUsername" prefHeight="40.0" prefWidth="370.0" promptText="Username">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Password:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="signPassword" prefHeight="40.0" promptText="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Button mnemonicParsing="false" onAction="#userSignup" prefHeight="40.0" prefWidth="100.0" text="Signup">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.5152671828524757" endY="1.0" startY="0.6412214177255412">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1518518477678299" green="0.4628395140171051" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.3168557584285736" green="0.8105263113975525" blue="0.0510331392288208" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+   </right>
+   <left>
+      <Pane maxWidth="782.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="530.0" fitWidth="485.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/hospital001.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="145.0" layoutX="285.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/rgautam001.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="156.0" fitWidth="210.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Profile">
+   <top>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="900.0" text="User Profile" textFill="BLUE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <Pane prefHeight="502.0" prefWidth="820.0" style="-fx-border-color: black; -fx-border-radius: 40; -fx-border-width: 3;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="50.0" layoutY="30.0" prefWidth="205.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Username:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Fullname:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="373.0" prefHeight="40.0" prefWidth="205.0" text="Gender:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Email:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Phone:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Address:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Date of Birth:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Account Type:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="205.0" text="Enrollment Date:" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="288.0" layoutY="30.0" prefHeight="459.0" prefWidth="482.0" spacing="10.0">
+               <children>
+                  <Label fx:id="lUsername" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lFullname" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lGender" layoutX="20.0" layoutY="373.0" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lEmail" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lPhone" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lAddress" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lDOB" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lType" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lED" maxWidth="1.7976931348623157E308" prefHeight="40.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="40.0" right="40.0" />
+         </BorderPane.margin>
+      </Pane>
+   </center>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#editProfile" style="-fx-background-color: blue;" text="Edit Profile" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

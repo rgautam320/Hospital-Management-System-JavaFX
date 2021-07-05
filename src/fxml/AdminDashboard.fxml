@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminDashboard">
+   <top>
+      <Label alignment="CENTER" maxHeight="70.0" maxWidth="1564.0" prefHeight="60.0" prefWidth="1526.0" style="-fx-background-color: #cffdff;" text="Gautam General Hospital" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5152671828524757" endY="1.0" startY="0.6412214177255412">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1518518477678299" green="0.4628395140171051" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </top>
+   <right>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" style="-fx-background-color: #f2ffe8;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="139.0" prefWidth="205.0" style="-fx-background-color: black;">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="86.0" spacing="4.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="189.0" text="Name:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="189.0" text="User:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="189.0" text="Type:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox layoutX="69.0" prefHeight="100.0" prefWidth="142.0" spacing="4.0">
+                     <children>
+                        <Label fx:id="nameLabel" prefHeight="30.0" prefWidth="189.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="username" prefHeight="30.0" prefWidth="189.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="accountType" prefHeight="30.0" prefWidth="189.0" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#logout" prefWidth="100.0" text="Logout">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+            <VBox maxHeight="1.7976931348623157E308" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUserList" text="All Users">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAdminList" text="Admin">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showDoctorList" text="Doctor">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showReceptionistList" text="Receptionist">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPatientList" text="Patient">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showWorkerList" text="Worker">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </right>
+   <left>
+      <Pane prefHeight="760.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="6.0" layoutY="12.0" prefHeight="480.0" prefWidth="100.0" spacing="14.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="ID:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Username:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Password:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Full Name:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="135.0" prefHeight="18.0" prefWidth="100.0" text="Gender:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Email:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="178.0" prefHeight="18.0" prefWidth="100.0" text="Phone:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="218.0" prefHeight="18.0" prefWidth="100.0" text="Address:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="258.0" prefHeight="18.0" prefWidth="100.0" text="DOB:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Type:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="100.0" text="Enroll:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="420.0" prefHeight="18.0" prefWidth="100.0" text="Qualification:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="467.0" prefHeight="18.0" prefWidth="100.0" text="Expertise:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="105.0" prefHeight="542.0" prefWidth="270.0" spacing="6.0">
+               <padding>
+                  <Insets left="5.0" right="5.0" top="6.0" />
+               </padding>
+               <children>
+                  <TextField fx:id="tfID" maxWidth="600.0" prefHeight="35.0" promptText="User ID">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfUsername" maxWidth="600.0" prefHeight="35.0" promptText="Username">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="tfPassword" maxWidth="600.0" prefHeight="35.0" prefWidth="286.0" promptText="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="tfFullname" maxWidth="600.0" prefHeight="35.0" promptText="Full Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="tfGender" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Gender" />
+                  <TextField fx:id="tfEmail" maxWidth="600.0" prefHeight="35.0" promptText="Email">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfPhone" layoutX="15.0" layoutY="176.0" maxWidth="600.0" prefHeight="35.0" promptText="Phone Number">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfAddress" layoutX="15.0" layoutY="216.0" maxWidth="600.0" prefHeight="35.0" promptText="Address">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <DatePicker fx:id="tfDOB" maxWidth="600.0" prefHeight="35.0" promptText="Date of Birth" />
+                  <ComboBox fx:id="tfType" maxWidth="600.0" prefHeight="35.0" promptText="Account Type" />
+                  <DatePicker fx:id="tfEnroll" layoutX="15.0" layoutY="296.0" maxWidth="600.0" prefHeight="35.0" promptText="Enrollment Date" />
+                  <TextField fx:id="tfQualification" maxWidth="600.0" prefHeight="35.0" promptText="Qualification">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfExpertise" layoutX="15.0" layoutY="472.0" maxWidth="600.0" prefHeight="35.0" promptText="Expertise">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox layoutX="49.0" layoutY="534.0" prefHeight="244.0" prefWidth="280.0" spacing="6.0">
+               <children>
+                  <Label fx:id="warning" alignment="CENTER" prefHeight="18.0" prefWidth="283.0" textFill="RED" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setEmpty" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: black;" text="Reset" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onInsert" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #66ff00;" text="Insert" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onUpdate" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onDelete" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <TableView fx:id="tv" cache="true" maxHeight="1.7976931348623157E308" maxWidth="900.0" onMouseClicked="#handleMouseAction" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="tvID" prefWidth="81.60000467300415" text="ID" />
+            <TableColumn fx:id="tvUsername" prefWidth="147.19998931884766" text="Username" />
+            <TableColumn fx:id="tvPassword" prefWidth="133.60000610351562" text="Password" />
+            <TableColumn fx:id="tvFullname" prefWidth="147.20004272460938" text="Full Name" />
+            <TableColumn fx:id="tvType" prefWidth="117.5999755859375" text="Type" />
+            <TableColumn fx:id="tvGender" prefWidth="75.0" text="Gender" />
+            <TableColumn fx:id="tvEmail" prefWidth="97.5999755859375" text="Email" />
+            <TableColumn fx:id="tvPhone" prefWidth="97.5999755859375" text="Phone" />
+            <TableColumn fx:id="tvAddress" prefWidth="97.5999755859375" text="Address" />
+            <TableColumn fx:id="tvDOB" prefWidth="97.5999755859375" text="DOB" />
+            <TableColumn fx:id="tvEnroll" prefWidth="97.5999755859375" text="Enrollment" />
+            <TableColumn fx:id="tvQualification" prefWidth="97.5999755859375" text="Qualification" />
+            <TableColumn fx:id="tvExpertise" prefWidth="97.5999755859375" text="Expertise" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>

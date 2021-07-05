@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doctor.DoctorAppointment">
+   <top>
+      <BorderPane maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+         <top>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="My Appointments" textFill="BLUE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="tv" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#handleMouseAction" prefHeight="275.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="tvID" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="tvFullname" prefWidth="75.0" text="Fullname" />
+                  <TableColumn fx:id="tvGender" prefWidth="75.0" text="Gender" />
+                  <TableColumn fx:id="tvPhone" prefWidth="75.0" text="Phone Number" />
+                  <TableColumn fx:id="tvEmail" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="tvDOB" prefWidth="75.0" text="DOB" />
+                  <TableColumn fx:id="tvAddress" prefWidth="75.0" text="Address" />
+                  <TableColumn fx:id="tvAD" prefWidth="75.0" text="Appointment Date" />
+                  <TableColumn fx:id="tvIssue" prefWidth="75.0" text="Issue" />
+                  <TableColumn fx:id="tvStatus" prefWidth="75.0" text="Status" />
+                  <TableColumn fx:id="tvPrescription" prefWidth="75.0" text="Prescription" />
+               </columns>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </top>
+   <right>
+      <VBox prefHeight="288.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="warning" alignment="CENTER" prefHeight="18.0" prefWidth="283.0" textFill="RED">
+               <VBox.margin>
+                  <Insets bottom="100.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setEmpty" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: black;" text="Reset" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onUpdate" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <left>
+      <VBox spacing="18.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Gender:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Phone No:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Email:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="150.0" text="DOB:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Address:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Appointment Date:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Issue:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Status:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="324.0" prefHeight="18.0" prefWidth="150.0" text="Prescription:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" top="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="6.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="237.0" prefWidth="235.0" spacing="9.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="tfGender" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Gender" />
+            <TextField fx:id="tfPhone" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Phone Number">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfEmail" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Email Address">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="tfDOB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Date of Birth" />
+            <TextField fx:id="tfAddress" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Address">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="tfAD" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Appointment Date" />
+            <TextField fx:id="tfIssue" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Issue">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="tfStatus" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Status" />
+            <TextField fx:id="tfPrescription" layoutX="10.0" layoutY="274.0" maxWidth="1.7976931348623157E308" prefHeight="35.0" promptText="Prescription">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="5.0" right="25.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
